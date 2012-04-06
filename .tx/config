@@ -1,0 +1,10 @@
+[main]
+host = https://www.transifex.net
+
+
+[ehour.wicketweb]
+file_filter = eHour-wicketweb/src/dist/i18n/EhourWebApplication_<lang>.properties
+source_file = eHour-wicketweb/src/dist/i18n/EhourWebApplication.properties
+source_lang = en
+type = PROPERTIES
+
