@@ -19,6 +19,7 @@
         <module>eHour-web</module>
         <module>eHour-audit</module>
         <module>eHour-standalone</module>
+        <module>eHour-war</module>
     </modules>
     <description>
         eHour - web-based time registration for consultancy companies
@@ -56,7 +57,7 @@
     </developers>
     <properties>
         <spring.version>3.0.7.RELEASE</spring.version>
-        <wicket.version>1.4.19</wicket.version>
+        <wicket.version>1.4.20</wicket.version>
         <jetty.version>7.6.0.v20120127</jetty.version>
         <derbydb.version>10.6.2.1</derbydb.version>
         <aspectj.version>1.6.12</aspectj.version>
@@ -155,11 +156,6 @@
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-deploy</artifactId>
                 <version>${jetty.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>tanukisoft</groupId>
-                <artifactId>wrapper</artifactId>
-                <version>3.5.7</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.ddlutils</groupId>
@@ -722,23 +718,6 @@
         <!--
             activated by default to allow release plugin to run without profile
         -->
-        <profile>
-            <id>war</id>
-        </profile>
-
-        <profile>
-            <id>jetty</id>
-            <!-- placeholder profile to allow IntelliJ to use this profile, actual profile is in web prj -->
-        </profile>
-
-        <profile>
-            <id>standalone</id>
-
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
-
         <profile>
             <id>prod</id>
             <build>
